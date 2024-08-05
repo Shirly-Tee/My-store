@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tech store</title>
+</head>
+<body class="text-black">
+    <nav class="bg-gray-900 p-6 mb-6">
+        <div class=" max-w-6xl mx-auto flex flex-row gap-8 items-center">
+            <!-- Search Area -->
+            <div class="relative w-full">
+                <input type="text"
+                id="search"
+                class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full"
+                placeholder="Search Products..."
+                />
+                <i class='bx bx-search absolute left-2 top-1/2 -translate-y-1/2'></i>
+
+            </div>
+            <!-- Cart Item -->
+            <div class="relative text-center md:mr-10">
+                <i class='bx bx-cart'></i>
+                <small id="cart-count" class="bg-red-500 rounded-full w-4 h-4text-xs text-white absolute -top-2 -right-2">0</small>
+            </div>
+        </div>
+    </nav>
+    <main class="flex flex-col   w-full justify-center items-center">
+        <div class="space-y-4 filt text-black w-full z-10  md:flex flex-col p-10 mb-20">
+            <h1 class="text-2xl font-bold text-center">SHOPPING MADE EASY </h1>
+            <h2 class="text-xl text-center">Categories</h2>
+            <div class="flex swiper">
+                <div id="filter-container" class="text-xl swiper-wrapper  gap-8 md:gap-2 ">
+                   
+                    
+    
+                   
+                </div>
+                <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+           
+            
+        </div>
+
+        <!-- Product Wrapper -->
+        <div id="product-wrapper" class="w-full flex flex-col md:flex-row gap-8 md:gap-4 place-content-center p-4 py-6 relative ml-auto flex-wrap">
+           <!-- item1 -->
+            
+        </div>
+       
+    </main>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+       
+
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+
+
+
+
+});
+      </script>
+    <script src="script.js"></script>
+</body>
+</html> 
